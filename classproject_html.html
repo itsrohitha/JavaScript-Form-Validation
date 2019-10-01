@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<link rel="stylesheet" href="basic.css">
 <script>
 function validateForm() {
 	var x = document.form["myForm"]["firstname"].value;
@@ -13,8 +14,7 @@ function validateForm() {
 		alert("This email has been filled out.");
 		return false;
 }
-</script>
-	<link rel="stylesheet" href="basic.css">
+</script>	
 <title>
 	Class Project - HTML
 </title>
@@ -23,8 +23,7 @@ function validateForm() {
 <h1>
 	Customer Information
 </h1>
-<form name="myForm" action="/action_page.php" 
-	onsubmit="return validateForm()" method="post">
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()">
 	<fieldset>
 	First Name:<br>
 	<input type="text" name="firstname"><br>
@@ -33,9 +32,10 @@ function validateForm() {
 	<input type="text" name="lastname"><br>
 		<br>
 	E-mail:<br>
-	<input type="text" name="email"><br>
+	<input type="email" name="email"><br>
 		<br>
 	<input type="submit">
+	<input type="reset">
 	</fieldset>
 </form>
 </body>
